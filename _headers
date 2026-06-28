@@ -1,0 +1,10 @@
+/*
+  Cache-Control: no-store, must-revalidate
+
+/index.wasm
+  Content-Encoding: gzip
+  Content-Type: application/wasm
+
+/index.pck
+  Content-Encoding: gzip
+  Content-Type: application/octet-stream
