@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>Baby Soccer Legends</title>
 		<style>
 html, body, #canvas {
@@ -93,15 +93,7 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Baby Soccer">
-<meta name="mobile-web-app-capable" content="yes">
-<style>
-body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
-#canvas{width:100%;height:100%;position:fixed;top:0;left:0}
-</style>
-<script>window.BSL_BUILD="2026-06-28 14:15:59";</script></head>
+	</head>
 	<body>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
@@ -122,28 +114,6 @@ body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-i
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":11614784,"index.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
-window.__BSL_LOGS = window.__BSL_LOGS || [];
-{
-  const _bslStart = engine.startGame.bind(engine);
-  engine.startGame = function (extraConfig) {
-    extraConfig = extraConfig || {};
-    const _op = extraConfig.onPrint;
-    const _ope = extraConfig.onPrintError;
-    extraConfig.onPrint = function (msg) {
-      try { console.log('[GDScript] ' + msg); window.__BSL_LOGS.push('[P] ' + msg); } catch(_){}
-      if (_op) _op(msg);
-    };
-    extraConfig.onPrintError = function (msg) {
-      try { console.error('[GDScript ERR] ' + msg); window.__BSL_LOGS.push('[E] ' + msg); } catch(_){}
-      if (_ope) _ope(msg);
-    };
-    return _bslStart(extraConfig);
-  };
-  window.__BSL_ENGINE = engine;
-  window.BSL_HOOK_INSTALLED = true;
-  console.log('[BSL] engine.startGame hooked for print capture');
-}
-
 
 (function () {
 	const statusOverlay = document.getElementById('status');
