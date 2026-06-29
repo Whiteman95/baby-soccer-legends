@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs1tfnepbtb7s"
-valid=false
+path="res://.godot/imported/index.png-9f3e5d37c1378df9b96636e0516de5e2.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://build/index.png"
+source_file="res://pages_deploy/index.png"
+dest_files=["res://.godot/imported/index.png-9f3e5d37c1378df9b96636e0516de5e2.ctex"]
 
 [params]
 
